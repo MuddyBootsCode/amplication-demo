@@ -58,17 +58,13 @@ export class TaskControllerBase {
       data: {
         ...data,
 
-        assignedTo: data.assignedTo
-          ? {
-              connect: data.assignedTo,
-            }
-          : undefined,
+        assignedTo: {
+          connect: data.assignedTo,
+        },
 
-        project: data.project
-          ? {
-              connect: data.project,
-            }
-          : undefined,
+        project: {
+          connect: data.project,
+        },
       },
       select: {
         assignedTo: {
@@ -245,17 +241,13 @@ export class TaskControllerBase {
         data: {
           ...data,
 
-          assignedTo: data.assignedTo
-            ? {
-                connect: data.assignedTo,
-              }
-            : undefined,
+          assignedTo: {
+            connect: data.assignedTo,
+          },
 
-          project: data.project
-            ? {
-                connect: data.project,
-              }
-            : undefined,
+          project: {
+            connect: data.project,
+          },
         },
         select: {
           assignedTo: {
