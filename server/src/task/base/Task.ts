@@ -3,9 +3,9 @@ import { ApiProperty } from "@nestjs/swagger";
 import { User } from "../../user/base/User";
 import {
   ValidateNested,
-  IsOptional,
   IsDate,
   IsInt,
+  IsOptional,
   IsString,
   IsEnum,
 } from "class-validator";
@@ -15,13 +15,12 @@ import { EnumTaskStatus } from "./EnumTaskStatus";
 @ObjectType()
 class Task {
   @ApiProperty({
-    required: false,
+    required: true,
     type: () => User,
   })
   @ValidateNested()
   @Type(() => User)
-  @IsOptional()
-  assignedTo?: User | null;
+  assignedTo?: User;
 
   @ApiProperty({
     required: true,
@@ -51,13 +50,12 @@ class Task {
   id!: string;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: () => Project,
   })
   @ValidateNested()
   @Type(() => Project)
-  @IsOptional()
-  project?: Project | null;
+  project?: Project;
 
   @ApiProperty({
     required: false,

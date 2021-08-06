@@ -3,8 +3,8 @@ import { ApiProperty } from "@nestjs/swagger";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 import {
   ValidateNested,
-  IsOptional,
   IsInt,
+  IsOptional,
   IsDate,
   IsEnum,
   IsString,
@@ -15,16 +15,13 @@ import { EnumTaskStatus } from "./EnumTaskStatus";
 @InputType()
 class TaskCreateInput {
   @ApiProperty({
-    required: false,
+    required: true,
     type: () => UserWhereUniqueInput,
   })
   @ValidateNested()
   @Type(() => UserWhereUniqueInput)
-  @IsOptional()
-  @Field(() => UserWhereUniqueInput, {
-    nullable: true,
-  })
-  assignedTo?: UserWhereUniqueInput | null;
+  @Field(() => UserWhereUniqueInput)
+  assignedTo!: UserWhereUniqueInput;
 
   @ApiProperty({
     required: false,
@@ -38,16 +35,13 @@ class TaskCreateInput {
   estimationDays?: number | null;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: () => ProjectWhereUniqueInput,
   })
   @ValidateNested()
   @Type(() => ProjectWhereUniqueInput)
-  @IsOptional()
-  @Field(() => ProjectWhereUniqueInput, {
-    nullable: true,
-  })
-  project?: ProjectWhereUniqueInput | null;
+  @Field(() => ProjectWhereUniqueInput)
+  project!: ProjectWhereUniqueInput;
 
   @ApiProperty({
     required: false,

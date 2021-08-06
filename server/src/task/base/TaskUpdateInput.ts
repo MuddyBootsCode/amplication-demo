@@ -24,7 +24,7 @@ class TaskUpdateInput {
   @Field(() => UserWhereUniqueInput, {
     nullable: true,
   })
-  assignedTo?: UserWhereUniqueInput | null;
+  assignedTo?: UserWhereUniqueInput;
 
   @ApiProperty({
     required: false,
@@ -47,7 +47,7 @@ class TaskUpdateInput {
   @Field(() => ProjectWhereUniqueInput, {
     nullable: true,
   })
-  project?: ProjectWhereUniqueInput | null;
+  project?: ProjectWhereUniqueInput;
 
   @ApiProperty({
     required: false,

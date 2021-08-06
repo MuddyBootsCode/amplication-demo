@@ -125,17 +125,13 @@ export class TaskResolverBase {
       data: {
         ...args.data,
 
-        assignedTo: args.data.assignedTo
-          ? {
-              connect: args.data.assignedTo,
-            }
-          : undefined,
+        assignedTo: {
+          connect: args.data.assignedTo,
+        },
 
-        project: args.data.project
-          ? {
-              connect: args.data.project,
-            }
-          : undefined,
+        project: {
+          connect: args.data.project,
+        },
       },
     });
   }
@@ -178,17 +174,13 @@ export class TaskResolverBase {
         data: {
           ...args.data,
 
-          assignedTo: args.data.assignedTo
-            ? {
-                connect: args.data.assignedTo,
-              }
-            : undefined,
+          assignedTo: {
+            connect: args.data.assignedTo,
+          },
 
-          project: args.data.project
-            ? {
-                connect: args.data.project,
-              }
-            : undefined,
+          project: {
+            connect: args.data.project,
+          },
         },
       });
     } catch (error) {
