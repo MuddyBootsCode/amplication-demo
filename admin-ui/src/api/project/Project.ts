@@ -1,4 +1,5 @@
 import { Task } from "../task/Task";
+import { User } from "../user/User";
 
 export type Project = {
   createdAt: Date;
@@ -10,4 +11,5 @@ export type Project = {
   startDate: Date | null;
   tasks?: Array<Task>;
   updatedAt: Date;
+  user?: User | null;
 };

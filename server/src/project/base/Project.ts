@@ -3,6 +3,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { IsDate, IsString, IsOptional, ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
 import { Task } from "../../task/base/Task";
+import { User } from "../../user/base/User";
 @ObjectType()
 class Project {
   @ApiProperty({
@@ -86,5 +87,14 @@ class Project {
   @Type(() => Date)
   @Field(() => Date)
   updatedAt!: Date;
+
+  @ApiProperty({
+    required: false,
+    type: () => User,
+  })
+  @ValidateNested()
+  @Type(() => User)
+  @IsOptional()
+  user?: User | null;
 }
 export { Project };
