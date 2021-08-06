@@ -1,0 +1,18 @@
+{
+  "dataServiceGeneratorVersion": "0.8.0",
+  "appInfo": {
+    "name": "Task Managment",
+    "description": "",
+    "version": "etkcc4ya",
+    "id": "cks0grl7d2119221bs6kznprr3c",
+    "url": "https://app.amplication.com/cks0grl7d2119221bs6kznprr3c",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "cks0grl7d2119221bs6kznprr3c"
+    }
+  }
+}
