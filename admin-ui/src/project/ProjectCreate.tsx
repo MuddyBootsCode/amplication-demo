@@ -1,11 +1,16 @@
 import * as React from "react";
+
 import {
   Create,
   SimpleForm,
   CreateProps,
   TextInput,
   DateTimeInput,
+  ReferenceInput,
+  SelectInput,
 } from "react-admin";
+
+import { UserTitle } from "../user/UserTitle";
 
 export const ProjectCreate = (props: CreateProps): React.ReactElement => {
   return (
@@ -16,6 +21,9 @@ export const ProjectCreate = (props: CreateProps): React.ReactElement => {
         <TextInput label="Name" source="name" />
         <TextInput label="Project Owner" source="owner" />
         <DateTimeInput label="Start Date" source="startDate" />
+        <ReferenceInput source="user.id" reference="User" label="User">
+          <SelectInput optionText={UserTitle} />
+        </ReferenceInput>
       </SimpleForm>
     </Create>
   );
