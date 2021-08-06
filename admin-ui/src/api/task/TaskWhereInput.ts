@@ -10,6 +10,6 @@ export type TaskWhereInput = {
   id?: StringFilter;
   project?: ProjectWhereUniqueInput;
   startDate?: DateTimeNullableFilter;
-  status?: "NEW" | "PENDING" | "ONGOING" | "DONE";
+  status?: "New" | "Pending" | "Ongoing" | "Done";
   title?: StringFilter;
 };

@@ -8,7 +8,7 @@ export type Task = {
   id: string;
   project?: Project;
   startDate: Date | null;
-  status?: "NEW" | "PENDING" | "ONGOING" | "DONE" | null;
+  status?: "New" | "Pending" | "Ongoing" | "Done" | null;
   title: string;
   updatedAt: Date;
 };

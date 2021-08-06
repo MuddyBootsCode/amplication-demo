@@ -49,8 +49,8 @@ model Task {
 }
 
 enum EnumTaskStatus {
-  NEW
-  PENDING
-  ONGOING
-  DONE
+  New
+  Pending
+  Ongoing
+  Done
 }
