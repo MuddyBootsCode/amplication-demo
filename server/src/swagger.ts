@@ -10,7 +10,6 @@ export const swaggerDocumentOptions = new DocumentBuilder()
   .setVersion("rd8l04tf")
   .addBasicAuth()
   .build();
-
 export const swaggerSetupOptions = {
   swaggerOptions: {
     persistAuthorization: true,
