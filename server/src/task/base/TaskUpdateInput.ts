@@ -69,7 +69,7 @@ class TaskUpdateInput {
   @Field(() => EnumTaskStatus, {
     nullable: true,
   })
-  status?: "NEW" | "PENDING" | "ONGOING" | "DONE" | null;
+  status?: "New" | "Pending" | "Ongoing" | "Done" | null;
 
   @ApiProperty({
     required: false,

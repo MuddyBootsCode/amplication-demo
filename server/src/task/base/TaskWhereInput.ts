@@ -76,7 +76,7 @@ class TaskWhereInput {
   @Field(() => EnumTaskStatus, {
     nullable: true,
   })
-  status?: "NEW" | "PENDING" | "ONGOING" | "DONE";
+  status?: "New" | "Pending" | "Ongoing" | "Done";
 
   @ApiProperty({
     required: false,
