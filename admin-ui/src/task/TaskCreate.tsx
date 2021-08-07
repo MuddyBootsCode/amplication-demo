@@ -30,10 +30,10 @@ export const TaskCreate = (props: CreateProps): React.ReactElement => {
           source="status"
           label="Status"
           choices={[
-            { label: "New", value: "NEW" },
-            { label: "Pending", value: "PENDING" },
-            { label: "Ongoing", value: "ONGOING" },
-            { label: "Done", value: "DONE" },
+            { label: "New", value: "New" },
+            { label: "Pending", value: "Pending" },
+            { label: "Ongoing", value: "Ongoing" },
+            { label: "Done", value: "Done" },
           ]}
           optionText="label"
           allowEmpty

@@ -6,6 +6,6 @@ export type TaskUpdateInput = {
   estimationDays?: number | null;
   project?: ProjectWhereUniqueInput;
   startDate?: Date | null;
-  status?: "NEW" | "PENDING" | "ONGOING" | "DONE" | null;
+  status?: "New" | "Pending" | "Ongoing" | "Done" | null;
   title?: string;
 };
